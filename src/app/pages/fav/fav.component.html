@@ -1,0 +1,43 @@
+<main>
+	<div class="container mt-4">
+		<div class="col-12">
+			<div class="card">
+				<div class="card-header">
+				 <i class="fas fa-heart mr-2"></i> Wishlist
+				 <button class="btn float-right"><i class="fas fa-square"></i></button>
+				</div>
+			  <div class="card-body">
+
+
+
+				<div *ngFor="let i of [1,2,3,4,5,6,7,8,9]" class="media mb-2">
+					<a class="d-flex mr-2" href="#">
+						<img src="/assets/img/profile.jpg" alt="">
+					</a>
+					<div class="media-body">
+						<h5>Media heading</h5>
+					</div>
+					<div>
+						<button type="button" class="btn btn-danger"><i class="fas fa-trash    "></i></button>
+					</div>
+				</div>
+
+				<div class="row">
+
+				<div *ngFor="let i of [1,2,3,4,5,6,7,8,9]"  class="card col-3 p-3 border-0  mb-3">
+					<img class="card-img-top" src="/assets/img/profile.jpg" alt="">
+					<div class="card-body p-0">
+						<h4 class="card-title m-1 mb-0">molay prouject</h4>
+						<button type="button" class="btn btn-block btn-danger"><i class="fas fa-trash    "></i></button>
+
+					</div>
+				</div>
+				</div>
+
+
+
+			  </div>
+			</div>
+		</div>
+	</div>
+</main>

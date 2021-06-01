@@ -1,0 +1,29 @@
+<button type="button" (click)="open($event)" class="btn action-btn btn-danger" >
+    <i class="fas fa-trash"></i>
+</button>
+
+<div [class.fad]="isOpen" class="modal show ">
+    <div class="modal-dialog" role="document">
+        <div (click)="clickOnModl($event)" class="modal-content">
+                <div class="modal-header" style=" padding: 6px 13px;background: #966e6e;color: #fff;">
+                        <h5 class="modal-title">Delete Country</h5>
+                </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <p>Are you sure to delete this Country ( <strong>{{country.nom_p}}</strong> )</p>
+                    <p>if you delete this country, </p>
+                    <p>all cityes and place in <strong>{{country.nom_p}}</strong> was deleted</p>
+                    <hr>
+                    <div class="form-group">
+                      <label for="">confirm with your Password</label>
+                      <input  type="password" class="form-control" placeholder="enter your password" >
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" (click)="close()">Close</button>
+                <button (click)="doDelete()" type="button" class="btn btn-danger">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>

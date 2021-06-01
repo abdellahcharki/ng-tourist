@@ -1,0 +1,196 @@
+a,button,input,select,textarea{
+    box-shadow: none !important;
+}
+
+*{
+    outline: none !important;
+
+}
+
+.modal{
+    background-color: rgba(0, 0, 0, 0.253);
+}
+body{
+    padding-top: 56px;
+}
+
+.modal-dialog{
+	margin-top: 80px;
+	.modal-content{
+		border:none !important;
+	}
+
+}
+button,.btn{
+    border-radius: 0 !important;
+    margin: {
+        right: 3px;
+        left: 3px;
+    };
+}
+.action-btn{
+    min-width: 50px;
+    padding: {
+        top: 3px;
+        bottom: 3px;
+        right: 7px;
+        left: 7px;
+    };
+    border-radius: 0;
+    color: #fff;
+    &:hover{
+        color:#ddd;
+    }
+}
+
+input,select,textarea{
+    border-radius: 0 !important;
+    border: none !important;
+    background-color: #ddd !important;
+    height: unset !important;
+    padding: {
+        top: .6em !important;
+        bottom: .6em !important;
+    };
+}
+
+
+[disabled]{
+    cursor: not-allowed;
+}
+
+// body{
+// 	overflow-x: hidden;
+// }
+
+
+main .slick-prev,
+main .slick-next,
+main .slick-arrow {
+   height: 45px;
+   width: 45px;
+   z-index: 100;
+   padding: 0;
+    margin: 0;
+    overflow: hidden;
+    text-align: center;
+
+   &::before,&::after{
+	   color:#444;
+	   font-size:37px;
+	   border-radius: 50%;
+   }
+
+}
+
+
+
+
+
+main .slick-prev{
+	left:-10px;
+}
+main .slick-next{
+	right: -10px;
+
+}
+.slick-slider{
+	.slick-list{
+		.slide.slick-slide{
+			overflow: hidden !important;
+			padding:10px;
+			a{
+				display:block;
+				text-decoration: none;
+				color:#444;
+
+				img{
+					width:100%;
+					height: 300px !important;
+				}
+			}
+		}
+	}
+
+}
+
+
+
+
+
+
+
+.main-img-city{
+	overflow: hidden;
+    width: 100%;
+    height: 550px;
+    position: relative;
+    img{
+		position: absolute;
+        width: 100%;
+        height: 100%;
+		top: 0;
+		z-index: 5;
+    }
+	.infos{
+		position: absolute;
+		bottom:0;
+		width:100%;
+		z-index: 9;
+		.title{
+
+			display:inline-block;
+			background: #fff;
+			padding: 10px 50px;
+			margin-bottom: 10px;
+			h1{
+				display:inline-block;
+			}
+		}
+
+		.places-count{
+			float: right;
+			background: #fff;
+			color: #000;
+			padding: 10px 30px;
+			margin: 16px;
+			font-weight: normal;
+		}
+	}
+
+
+
+
+    .upload-image{
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        border: none;
+        background: #fff;
+        outline: none;
+        margin: 0;
+        bottom: 0;
+        right: 0;
+        font-size: 25px;
+        text-align: center;
+        padding: 0;
+        border-top-left-radius: 12px !important;
+        input{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0
+
+        }
+        i{
+            position: absolute;
+            width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-align: center;
+    line-height: 2.5;
+        }
+    }
+}
+

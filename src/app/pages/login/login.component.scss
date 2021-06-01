@@ -1,0 +1,43 @@
+.login-card{
+    width: 400px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 1px #0000005e;
+    background: #fff;
+    position: fixed;
+    top: 90px;
+    left: 40px;
+    img{
+        height: 100px;
+        width: 100%;
+    }
+}
+
+
+main{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    &>img{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+.submit-login{
+    width: 200px;
+    border-radius: 100px !important;
+    margin: 0 auto;
+}
+
+.home-login{
+    position: fixed;
+    top: 100px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.192);
+    color: #fff;
+    width: 800px;
+    padding: 1em;
+}

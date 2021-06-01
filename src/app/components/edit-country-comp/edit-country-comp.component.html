@@ -1,0 +1,40 @@
+
+    <button type="button"  (click)="toggleNewCountry($event)" class="btn action-btn  btn-dark"><i class="fas fa-edit"></i></button>
+
+
+<div class="col-12">
+        
+    <!-- Button trigger modal -->
+
+    <div [class.fad.show]="isOpen"  class="modal  " tabindex="-1" role="dialog">
+        <div class="modal-dialog shadow" (click)="clickOnModl($event)"  role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Edit Country</h5>
+            </div>
+            <div class="modal-body">
+              <p>Enter a new Country , pleas make the name unique and corect</p>
+              <div class="form-group">
+                <label for="">continent <span class="text-danger">( read only )</span> </label>
+                <input disabled type="text"
+                  class="form-control" value="{{country.cont}}" name="" id="" aria-describedby="helpId" placeholder="">
+              </div>
+              <div class="form-group">
+                <label for="">country</label>
+                <input type="text"
+                value="{{country.nom_p }}"
+                placeholder="Enter the country" class="form-control" name="">
+                <small id="helpId" class="form-text text-danger text-muted">write hire country name and must be not null and then caracter</small>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" (click)="close()" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+</div>

@@ -1,0 +1,81 @@
+a, button, input {
+  box-shadow: none !important;
+}
+
+* {
+  outline: none !important;
+}
+
+body {
+  padding-top: 56px;
+}
+
+.action-btn {
+  width: 50px;
+  padding: 3px;
+  border-radius: 0;
+}
+
+.navbar {
+  background-color: #fff !important;
+  box-shadow: 0 0 3px 1px #00000057 !important;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.navbar .dropdown {
+  color: black;
+}
+.dropdown .dropdown-menu {
+  min-width: 230px;
+  border: none;
+  box-shadow: 0 0 3px 0px #54343457;
+  border-radius: 0;
+}
+
+.dash-statistic-card {
+  padding: 1em 0.6em;
+}
+.dash-statistic-card .card {
+  border: none;
+  box-shadow: 0 0 3px 0px #54343457;
+  border-radius: 0;
+  height: 100px;
+}
+.dash-statistic-card .card .card-body {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0;
+}
+.dash-statistic-card .card .card-body .card-icon {
+  font-size: 76px;
+  height: 100%;
+  line-height: 1;
+  text-align: center;
+  transform: rotate(-36deg);
+  color: #323556;
+}
+.dash-statistic-card .card .card-body .card-statistic {
+  font-size: 45px;
+  text-align: center;
+  align-items: center;
+  /* justify-content: center; */
+  /* align-items: center; */
+  line-height: 2;
+  color: #323556;
+  text-align: center;
+}
+
+.table thead {
+  background: #53465f;
+  color: #fff;
+  border: none;
+}
+.table thead th {
+  padding: 10px;
+}
+.table tbody tr td {
+  padding: 0.5em;
+}
+
+/*# sourceMappingURL=style.css.map */

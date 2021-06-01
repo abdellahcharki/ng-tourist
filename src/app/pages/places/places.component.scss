@@ -1,0 +1,15 @@
+.search-fild{
+    position: relative;
+    width: 300px;
+    i{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 16px;
+    }
+    input{
+    
+    padding-left: 50px;
+    line-height: 1;
+    }
+}

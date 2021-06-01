@@ -1,0 +1,74 @@
+<main>
+    <div class="container">
+        <div class="col-12 mt-3">
+            <div class="card">
+                <div class="card-header">
+                    <h5>Profile</h5>
+                </div>
+                <div class="card-body mb-3">
+                    <div class="media ">
+          
+          
+          
+                        <div class="avatar">
+                            <img class="rounded " src="/assets/img/profile.jpg" alt="">
+                            <button (click)="toggelModal($event)"><i class="fas fa-upload    "></i></button>
+                        </div> 
+
+
+                        <div [class.fad.show]="isOpen" class="modal" >
+                            <div (click)="clickOnModal($event)" class="modal-dialog" >
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Change personal photo</h5>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="avatar">
+                                            <img class="rounded mr-3" src="/assets/img/profile.jpg" alt="">
+                                        </div>
+
+
+                                        <div class="form-group upload-avatar mt-2">
+                                            <i class="fas fa-upload    "></i>
+                                            <p>Upload Photo</p>
+                                            <input type="file" class="form-control-file" >
+
+                                        </div>
+                
+
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" (click)="close()" >Close</button>
+                                        <button type="button" class="btn btn-primary">Save</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class=" ml-3 media-body">
+                            
+                        </div>
+                    </div>
+                    <ul class="list-group mt-4">
+                        <li class="list-group-item"><div class="data"><div class="label">Name</div><div class="value">Abdellah charki</div></div><button class="btn "><i class="fas fa-pen   "></i></button></li>
+                        <li class="list-group-item"><div class="data"><div class="label">E-mail</div><div class="value">abdellah0charki@gmail.com</div></div><button class="btn "><i class="fas fa-pen   "></i></button></li>
+                        <li class="list-group-item"><div class="data"><div class="label">Date of bridth</div><div class="value">1/23/1998</div></div><button class="btn "><i class="fas fa-pen   "></i></button></li>
+                        <li class="list-group-item"><div class="data"><div class="label">password</div><div class="value">
+                            <i class="fas fa-asterisk"></i>
+                            <i class="fas fa-asterisk"></i>
+                            <i class="fas fa-asterisk"></i>
+                            <i class="fas fa-asterisk"></i>
+                            <i class="fas fa-asterisk"></i>
+                            <i class="fas fa-asterisk"></i>
+                            <i class="fas fa-asterisk"></i>
+                            <i class="fas fa-asterisk"></i>
+                            <i class="fas fa-asterisk"></i>
+                            <i class="fas fa-asterisk"></i>
+                        </div></div><button class="btn "><i class="fas fa-pen   "></i></button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

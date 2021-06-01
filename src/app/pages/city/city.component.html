@@ -1,0 +1,66 @@
+<main>
+
+
+	<div class="main-img-city">
+		<img  [src]="url+'uploads/'+city.photo_v" alt="">
+		<div class="infos">
+
+			<div class="title">
+				<h1 class="m-0"><i class="fas fa-map-marker-alt mr-2"></i> {{city.nom_ville}}, {{city.nom_pays}}</h1>
+			</div>
+
+			<span class="badge badge-pill places-count badge-primary">{{ city.responsPlace?.length || 0}} place</span>
+
+
+
+		</div>
+	</div>
+
+
+
+
+
+    <div class="container">
+        <div class="row">
+
+
+
+
+
+            <div class="col-12 mt-3">
+                <div class="form-group text">
+                    <h4>Description</h4>
+
+                    <p>{{city.desc}}</p>
+                </div>
+            </div>
+
+            <div class="col-12 my-3">
+                <h4>Places</h4>
+
+
+
+
+				<ngx-slick-carousel  class="carousel"  [config]="{slidesToShow:3,autoplay:true,infinite:false}" >
+
+
+					<div  *ngFor="let c of city.responsPlace"   ngxSlickItem  class="slide">
+						<a href="#">
+
+						<img  [src]="url+'uploads/'+c.photo">
+						<p class="p-2">{{ c.nom_place }}</p>
+
+						</a>
+					</div>
+				</ngx-slick-carousel>
+
+
+
+
+            </div>
+        </div>
+    </div>
+</main>
+
+
+<app-footer></app-footer>

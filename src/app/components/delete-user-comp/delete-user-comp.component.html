@@ -1,0 +1,22 @@
+<button (click)="open($event)" type="button"  class="btn action-btn btn-danger" >
+    <i class="fas fa-trash"></i>
+</button>
+
+<div [class.fad]="isOpen" class="modal show ">
+    <div (click)="onClickModal($event)" class="modal-dialog" role="document">
+        <div  class="modal-content">
+                <div class="modal-header" style=" padding: 6px 13px;background: #966e6e;color: #fff;">
+                        <h5 class="modal-title">Delete User</h5>
+                </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <p>Are you sure to delete <strong>{{ name }}</strong> </p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" (click)="close()">Close</button>
+                <button type="button" (click)="delete()" class="btn btn-danger">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>

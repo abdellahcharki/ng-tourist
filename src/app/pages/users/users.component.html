@@ -1,0 +1,54 @@
+<main>
+    <div class="container">
+        <div class="row mt-3">
+
+
+            <table class="table col-12 mt-2">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>avatar</th>
+                        <th>name</th>
+                        <th>email</th>
+                        <th>date de creation</th>
+
+                        <th>actions</th>
+
+                    </tr>
+                </thead>
+
+                <tbody>
+
+
+
+                    <tr *ngFor="let user of users">
+                        <td>{{user.id}}</td>
+                        <td class="p-1">
+                            <div class="avatar">
+                                <i *ngIf="user.isAdmin" class="fas fa-star"></i>
+
+                                <img  class="rounded-circle" src="assets/img/profile.jpg" alt="">
+                            </div></td>
+                        <td>{{user.name}}</td>
+                        <td>{{user.email}}</td>
+                        <td>{{'user.created_at | date' }}</td>
+                        <td>
+                            <button style="width: 110px;" *ngIf="!user.isAdmin" type="button" class="btn action-btn  btn-info" data-toggle="modal" data-target="#modelId">set as admin</button>
+                            <button style="width: 110px;" *ngIf="user.isAdmin" type="button" class="btn action-btn  btn-info" data-toggle="modal" data-target="#modelId">set as user</button>
+                            <!-- <app-delete-user-comp [id]="user.id" [name]="user?.name"></app-delete-user-comp> -->
+                        </td>
+                    </tr>
+
+
+
+
+
+
+                </tbody>
+            </table>
+
+
+
+        </div>
+    </div>
+</main>

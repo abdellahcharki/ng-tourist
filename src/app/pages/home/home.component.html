@@ -1,0 +1,60 @@
+<main>
+    <div class="slider-home">
+        <!-- <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=633&q=80" alt=""> -->
+        <img src="https://images.unsplash.com/photo-1530521954074-e64f6810b32d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80" alt="">
+
+
+        <div class="content text-center">
+            <h2 class="text-center mt-4">Hi, World : you can travel any waere any time </h2>
+            <p class="w-75">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae rem delectus expedita autem maiores in sed placeat impedit reprehenderit animi nam, nisi officiis, ipsum vitae quam consectetur. Debitis, nam asperiores.</p>
+            <app-search></app-search>
+        </div>
+
+
+    </div>
+    <div class="container-fluid">
+        <div class="row p-3">
+
+			<div class="col-12">
+
+
+
+
+
+
+
+			</div>
+            <div  *ngFor="let city of cityes;let in = index" class="p-0 mt-2 border-0 card col-12">
+
+
+
+
+
+
+                <ng-container  *ngIf="city.responsPlace?.length||0>0">
+
+                <div class="card-header py-1">
+                   <h4 class="m-0"> {{city.nom_ville}}, {{city.nom_pays}} <a class="btn float-right" [routerLink]="['cityes',city.id_ville]">see more place <i class="fas fa-arrow-right    "></i></a></h4>
+                </div>
+                <div class="card-body p-0 ">
+					<ngx-slick-carousel  class="carousel"  [config]="{slidesToShow: 4,autoplay:true,infinite:false}" >
+
+
+						<div   *ngFor="let place of  city.responsPlace"   ngxSlickItem  class="slide">
+							<a [routerLink]="['places',place.id_place]">
+							<img class="img-item"  [src]="url + 'uploads/' +place.photo" alt=""  >
+							<p class="p-2">{{ place.nom_place }}</p>
+							</a>
+						</div>
+					</ngx-slick-carousel>
+                </div>
+
+
+            </ng-container>
+
+
+            </div>
+        </div>
+    </div>
+</main>
+<app-footer></app-footer>

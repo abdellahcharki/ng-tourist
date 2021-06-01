@@ -1,0 +1,55 @@
+<main>
+
+
+	<div class="main-img-city">
+		<div class="upload-image">
+			<i class="fas fa-upload"></i>
+			<input accept="image/*" #input type="file" name="" id="">
+		</div>
+		<img  #img  src="assets/img/default_placeholder.png" alt="">
+	</div>
+
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 mt-3">
+                <div class="form-group w-50 d-inline-block pr-1">
+
+                  <label for="">city name</label>
+                  <input type="text"
+                    class="form-control" name="" id="" aria-describedby="helpId" placeholder="city name">
+                </div>
+
+
+
+                <div class="form-group w-50 pl-1 d-inline-block">
+                    <label for="">city country</label>
+                      <select  class="form-control" name="" id="">
+                          <option *ngFor="let c of countrys" [value]="c.id">{{c.nom_p}}</option>
+
+                      </select>
+                  </div>
+
+
+            </div>
+
+
+
+            <div class="col-12 mt-3">
+                <h4>Description</h4>
+                <div class="form-group">
+
+                  <textarea   placeholder="write your discription"  class="form-control" name="" id="" rows="10"></textarea>
+                </div>
+            </div>
+
+
+
+            <div class="col-12 my-3">
+                <button type="button" class="btn float-right btn-primary">Add city</button>
+            </div>
+        </div>
+    </div>
+</main>

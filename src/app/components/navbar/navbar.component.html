@@ -1,0 +1,42 @@
+<nav class="navbar fixed-top navbar-expand   bg-light">
+
+    <div class="dropdown">
+        <button (click)="toggelProfileMenu($event)" class="btn btn-primary dropdown-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div [class.show]="menuProfile" class="dropdown-menu" aria-labelledby="triggerId">
+            <a class="dropdown-item" routerLink="dashboard"> <i class="fas fa-chart-bar"></i> Dashboard</a>
+            <a class="dropdown-item"  routerLink="users" > <i class="fas fa-users"></i> Users</a>
+            <a class="dropdown-item" routerLink="places" > <i class="fas fa-archway"></i> Places</a>
+            <a class="dropdown-item" routerLink="cityes"><i class="fas fa-location-arrow"></i> Cityes</a>
+            <a class="dropdown-item" routerLink="countrys"> <i class="fas fa-flag"></i> Countrys</a>
+        </div>
+    </div>
+
+
+    <a class="navbar-brand" routerLink=""><img height="46" src="assets/img/logo.PNG" alt=""></a>
+    <button class="navbar-toggler" >
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div style="justify-content: flex-end;" class="collapse  navbar-collapse" id="collapsibleNavId">
+
+        <a routerLink="login" class="btn  auth-btn btn-info" >Log In </a>
+        <a  routerLink="register"  class="btn auth-btn btn-primary" >Regster</a>
+
+
+        <div class="dropdown">
+            <button (click)="toggelMenu($event)" class="btn dropdown-toggle" >Abdellah charki </button>
+
+            <div [class.show]="menu" class="dropdown-menu dropdown-menu-right" aria-labelledby="triggerId">
+                <a class="dropdown-item" routerLink="profile">
+                    <i class="fas fa-user"></i> Profile
+                </a>
+                <a class="dropdown-item" routerLink="favorite">
+                    <i class="fas fa-heart"></i> Favorite
+                </a>
+                <div class="dropdown-divider"></div>
+                <button class="dropdown-item mx-0" ><i class="fas fa-sign-out-alt"></i> Log out</button>
+            </div>
+        </div>
+    </div>
+</nav>
